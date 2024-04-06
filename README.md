@@ -35,6 +35,19 @@ Feel free to explore my repositories for more projects!
 
 > [!NOTE]
 > I am currently working on these projects and more. Please stay tuned for further updates!for further updates!
+
+## GitHub Stats
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api?username=Zylo23&show_icons=true&bg_color=1e1e2e&text_color=cdd6f4&icon_color=cba6f7&title_color=94e2d&hide_border=false&count_private=true&hide_title=true" alt="BadEnd's GitHub Stats" />
+    </td>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zylo23&layout=compact&bg_color=1e1e2e&text_color=cdd6f4&icon_color=cba6f7&title_color=94e2d&hide_border=false&langs_count=8&hide_title=true" alt="Top Languages" />
+    </td>
+  </tr>
+</table>
 <!--
 ## Get in Touch
 
