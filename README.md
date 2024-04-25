@@ -1,60 +1,61 @@
 # Hi there! 👋
 
-Welcome to my GitHub profile! I'm Zylo, a passionate developer who loves building cool projects and contributing to open-source software. Here, you'll find a collection of my work, ranging from personal projects to collaborations and contributions.
+```ts
+// File: zylo.ts
 
-## About Me
+class Developer {
+  name: string;
+  age: number;
+  location: string;
+  languages: string[];
 
-- 🚀 Full-stack Developer
-- 💻 Tech enthusiast
-- 🌱 Lifelong learner
+  constructor() {
+    this.name = 'Zylo';
+    this.age = 21;
+    this.location = 'Samut Sakorn, Thailand';
+    this.languages = ['JavaScript', 'TypeScript', 'C#', 'Python', 'Go'];
+  }
 
-## What I Do
+  sayHello() {
+    console.log(`Hello there! I'm ${this.name}!`);
+    console.log(`I'm a ${this.age}-year-old developer from ${this.location}.`);
+    console.log(`I'm proficient in the following languages:`);
+    this.languages.forEach((language) => console.log(`- ${language}`));
+  }
+}
+
+const zylo = new Developer();
+zylo.sayHello();
+```
+
+## 👨‍💻 What I do
 
 I enjoy working with various technologies and tools, including:
 
 - **Languages**: JavaScript, TypeScript, C#, Python, Go
-- **Frameworks/Libraries**: Node.js, Next.js, React, Svelte, Vue.js, Tailwind CSS, Shadcn UI
+- **Frameworks/Libraries**: Next.js, React, Svelte, Vue.js, Tailwind CSS, Shadcn UI
 - **Databases**: MongoDB, PostgreSQL, MySQL, Firebase
 - **Tools**: Git, Docker, VS Code
 
-## Projects
-<!--
-Here are some of the projects I'm proud of:
+## 🏆 GitHub Trophies
+![trophy](https://github-profile-trophy.vercel.app/?username=zylo23&theme=tokyonight)
 
-1. **Project A**: Brief description or key features.
-   ![Project A](link-to-project-a)
-
-2. **Project B**: Brief description or key features.
-   ![Project B](link-to-project-b)
-
-3. **Project C**: Brief description or key features.
-   ![Project C](link-to-project-c)
-
-Feel free to explore my repositories for more projects!
--->
-
-> [!NOTE]
-> I am currently working on these projects and more. Please stay tuned for further updates!for further updates!
-
-## GitHub Stats
+## 📈 GitHub Stats
 
 <table>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=Zylo23&show_icons=true&bg_color=1e1e2e&text_color=cdd6f4&icon_color=cba6f7&title_color=94e2d&hide_border=false&count_private=true&hide_title=true" alt="BadEnd's GitHub Stats" />
+      <img src="https://github-readme-stats.vercel.app/api?username=zylo23&show_icons=true&theme=tokyonight&hide_border=true" alt="Zylo's GitHub Stats">
     </td>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zylo23&layout=compact&bg_color=1e1e2e&text_color=cdd6f4&icon_color=cba6f7&title_color=94e2d&hide_border=false&langs_count=8&hide_title=true" alt="Top Languages" />
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=zylo23&theme=tokyonight&hide_border=true" alt="GitHub Streak">
     </td>
   </tr>
 </table>
-<!--
-## Get in Touch
 
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
-- Twitter: [Your Twitter Profile](https://twitter.com/your-profile)
+![Top Langs](https://github-readme-activity-graph.vercel.app/graph?username=zylo23&theme=tokyo-night)
 
-Let's connect and collaborate on exciting projects! 😊
--->
+## 📫 Get in touch
 
----
+- Discord: [pyyupsk](https://discord.com/users/1226475144554483734)
+- Email: [pyyupsk@proton.me](mailto:pyyupsk@proton.me)
