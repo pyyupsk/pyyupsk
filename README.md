@@ -13,7 +13,7 @@ struct Developer {
 impl Developer {
     fn new() -> Developer {
         Developer {
-            name: String::from("Zylo"),
+            name: String::from("ファース"),
             age: 21,
             location: String::from("Samut Sakorn, Thailand"),
             languages: vec![
@@ -37,8 +37,8 @@ impl Developer {
 }
 
 fn main() {
-    let zylo = Developer::new();
-    zylo.say_hello();
+    let pyyupsk = Developer::new();
+    pyyupsk.say_hello();
 }
 ```
 
