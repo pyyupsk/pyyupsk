@@ -56,15 +56,15 @@ I enjoy working with various technologies and tools, including:
 <table>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=zylo23&show_icons=true&theme=onedark&hide_border=true&title_color=67b0e8&text_color=dadada&icon_color=dadada&border_color=141b1e&bg_color=141b1e" alt="Zylo's GitHub Stats">
+      <img src="https://github-readme-stats.vercel.app/api?username=pyyupsk&show_icons=true&theme=onedark&hide_border=true&title_color=67b0e8&text_color=dadada&icon_color=dadada&border_color=141b1e&bg_color=141b1e" alt="Zylo's GitHub Stats">
     </td>
     <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=zylo23&theme=onedark&hide_border=true&background=141b1e&stroke=67b0e8&ring=67b0e8&fire=67b0e8&currStreakNum=dadada&sideNums=dadada&currStreakLabel=dadada&sideLabels=dadada&dates=dadada&excludeDaysLabel=dadada" alt="GitHub Streak">
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=pyyupsk&theme=onedark&hide_border=true&background=141b1e&stroke=67b0e8&ring=67b0e8&fire=67b0e8&currStreakNum=dadada&sideNums=dadada&currStreakLabel=dadada&sideLabels=dadada&dates=dadada&excludeDaysLabel=dadada" alt="GitHub Streak">
     </td>
   </tr>
 </table>
 
-![Custom Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=zylo23&bg_color=141b1e&color=dadada&line=67b0e8&point=dadada&area=true&hide_border=true)
+![Custom Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk&bg_color=141b1e&color=dadada&line=67b0e8&point=dadada&area=true&hide_border=true)
 
 ## 📫 Get in touch
 
