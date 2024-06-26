@@ -1,6 +1,6 @@
 # Hi there! 👋
 
-```rs
+```rust
 use std::println;
 
 struct Developer {
@@ -22,6 +22,7 @@ impl Developer {
                 String::from("C#"),
                 String::from("Python"),
                 String::from("Go"),
+                String::from("Rust"),
             ],
         }
     }
