@@ -1,58 +1,43 @@
-# Hi there! 👋
+# 🚀 @pyyupsk
 
-```rust
-use std::println;
+Welcome to my GitHub profile! I'm **Pongsakorn Thipayanate**, but you can call me **First**. I'm a 21-year-old self-taught developer passionate about coding, reverse engineering, and building innovative projects
 
-struct Developer {
-    name: String,
-    age: u32,
-    location: String,
-    languages: Vec<String>,
-}
+<em>_"Coding from dawn till dusk, I turn ideas into reality."_</em>
 
-impl Developer {
-    fn new() -> Developer {
-        Developer {
-            name: String::from("ファース"),
-            age: 21,
-            location: String::from("Samut Sakorn, Thailand"),
-            languages: vec![
-                String::from("JavaScript"),
-                String::from("TypeScript"),
-                String::from("C#"),
-                String::from("Python"),
-                String::from("Go"),
-                String::from("Rust"),
-            ],
-        }
-    }
+## 🛠️ Skills & Technologies
 
-    fn say_hello(&self) {
-        println!("Hello there! I'm {}!", self.name);
-        println!("I'm a {}-year-old developer from {}.", self.age, self.location);
-        println!("I'm proficient in the following languages:");
-        for language in &self.languages {
-            println!("- {}", language);
-        }
-    }
-}
+- **Languages**: JavaScript, TypeScript, C#, Python, Go, Rust, SQL, HTML, CSS
+- **Frameworks**: Next.js, React, Svelte, Nuxt.js, Vue, Express.js, Elysia, Nest.js
+- **Databases**: PostgreSQL, MySQL, SQLite
+- **Tools**: Git, Docker, Vercel, TurboRepo, Visual Studio Code, Neovim
 
-fn main() {
-    let pyyupsk = Developer::new();
-    pyyupsk.say_hello();
-}
+## 🌟 Featured Project: [Axiom Boilerplate](https://github.com/pyyupsk/axiom)
+
+![Axiom Boilerplate](https://axiom-boilerplate.vercel.app/opengraph.png)
+
+### **Project Overview**
+
+**Axiom** is a cutting-edge web development boilerplate, built to accelerate the creation of scalable, high-performance applications. Leveraging Next.js, TypeScript, Prisma, NextAuth.js, and Tailwind CSS, Axiom provides everything you need to build modern web applications with speed, type safety, and style.
+
+- **Tech Stack**: Next.js, TypeScript, Prisma ORM, NextAuth.js, Tailwind CSS, Shadcn/UI
+- **Features**: Rapid Development, Scalable Architecture, Type-Safe and Secure
+- **Status**: Completed
+
+#### 🚀 **Preview**: [Preview](https://axiom-boilerplate.vercel.app/)
+
+```bash
+# Clone this repository
+git clone https://github.com/pyyupsk/axiom.git
+cd axiom
+
+# Install dependencies
+npm install
+
+# Run the project in development mode
+npm run dev
 ```
 
-## 👨‍💻 What I do
-
-I enjoy working with various technologies and tools, including:
-
-- **Languages**: JavaScript, TypeScript, C#, Python, Go, Rust
-- **Frameworks/Libraries**: Next.js, React, Svelte, Vue.js, Tailwind CSS, Shadcn UI
-- **Databases**: MongoDB, PostgreSQL, MySQL, Firebase, Supabase, Prisma
-- **Tools**: Git, Docker, VS Code, GitHub, Vercel, Netlify
-
-## 📈 GitHub Stats
+## 📊 GitHub Stats
 
 <table>
   <tr>
@@ -67,7 +52,23 @@ I enjoy working with various technologies and tools, including:
 
 ![Custom Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk&bg_color=141b1e&color=dadada&line=67b0e8&point=dadada&area=true&hide_border=true)
 
-## 📫 Get in touch
+## 📝 Blog & Writing
 
-- Discord: [pyyupsk](https://discord.com/users/1226475144554483734)
-- Email: [pyyupsk@proton.me](mailto:pyyupsk@proton.me)
+Check out my latest thoughts, tutorials, and insights on my blog. I write about coding challenges, reverse engineering, and share tips on mastering web development.
+
+### **Latest Posts**
+
+- **[Understanding One-to-One and One-to-Many Relationships in Database Design](https://pyyupsk.vercel.app/post/95da5520-07e6-4962-93d3-7906d657f389)**
+- **[Harnessing the Power of Next.js with Prisma ORM](https://pyyupsk.vercel.app/post/b4d61e39-15c8-494e-acaa-f8efcd830504)**
+
+## 📫 How to Reach Me
+
+I’m always open to collaboration, freelancing, or just a friendly chat about coding. Feel free to connect with me through any of the following channels:
+
+- **Email**: [pyyupsk@proton.me](mailto:pyyupsk@proton.me)
+- **GitHub**: [pyyupsk](https://github.com/pyyupsk)
+- **X (Twitter)**: [@pyyupsk\_](https://x.com/pyyupsk_)
+
+## 🤝 Let's Build Something Amazing Together!
+
+I'm always excited to take on new challenges and work on exciting projects. Whether you're interested in collaborating on an open-source project, need help with development, or have an idea you'd like to discuss, let's connect!
