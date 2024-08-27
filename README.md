@@ -6,36 +6,36 @@ Welcome to my GitHub profile! I'm **Pongsakorn Thipayanate**, but you can call m
 
 ## 🛠️ Skills & Technologies
 
-- **Languages**: JavaScript, TypeScript, C#, Python, Go, Rust, SQL, HTML, CSS
-- **Frameworks**: Next.js, React, Svelte, Nuxt.js, Vue, Express.js, Elysia, Nest.js
-- **Databases**: PostgreSQL, MySQL, SQLite
-- **Tools**: Git, Docker, Vercel, TurboRepo, Visual Studio Code, Neovim
+-   **Languages**: JavaScript, TypeScript, C#, Python, Go, Rust, SQL, HTML, CSS
+-   **Frameworks**: Next.js, React, Svelte, Nuxt.js, Vue, Express.js, Elysia, Nest.js
+-   **Databases**: PostgreSQL, MySQL, SQLite
+-   **Tools**: Git, Docker, Vercel, TurboRepo, Visual Studio Code, Neovim
 
-## 🌟 Featured Project: [Axiom Boilerplate](https://github.com/pyyupsk/axiom)
+## 🌟 Featured Project: [Personal Website](https://github.com/pyyupsk/personal-website)
 
-![Axiom Boilerplate](https://axiom-boilerplate.vercel.app/opengraph.png)
+📚 **Personal Website,** is a digital playground for showcasing projects, sharing blog posts, and connecting with the community. It's built using modern technologies, including Next.js, and is available under the MIT License. To get started, you can clone the repository, install dependencies, set up environment variables, and run the development server. The project aims to represent the creator's passion for coding and personal growth. 💻🚀
 
-### **Project Overview**
+-   **Tech Stack**: Next.js, TypeScript, Prisma ORM, Auth.js, Tailwind CSS, Shadcn/UI
+-   **Status**: Completed
 
-**Axiom** is a cutting-edge web development boilerplate, built to accelerate the creation of scalable, high-performance applications. Leveraging Next.js, TypeScript, Prisma, NextAuth.js, and Tailwind CSS, Axiom provides everything you need to build modern web applications with speed, type safety, and style.
-
-- **Tech Stack**: Next.js, TypeScript, Prisma ORM, NextAuth.js, Tailwind CSS, Shadcn/UI
-- **Features**: Rapid Development, Scalable Architecture, Type-Safe and Secure
-- **Status**: Completed
-
-#### 🚀 **Preview**: [Preview](https://axiom-boilerplate.vercel.app/)
+#### 🚀 **Preview**: [Preview](https://pyyupsk.vercel.app/)
 
 ```bash
 # Clone this repository
-git clone https://github.com/pyyupsk/axiom.git
-cd axiom
+https://github.com/pyyupsk/personal-website.git
+cd personal-website
 
 # Install dependencies
 npm install
 
+# Set up environment variables
+cp .env.example .env
+
 # Run the project in development mode
 npm run dev
 ```
+
+For more details, check out the [README](https://github.com/pyyupsk/personal-website/blob/main/README.md).
 
 ## 📊 GitHub Stats
 
@@ -58,16 +58,16 @@ Check out my latest thoughts, tutorials, and insights on my blog. I write about 
 
 ### **Latest Posts**
 
-- **[Understanding One-to-One and One-to-Many Relationships in Database Design](https://pyyupsk.vercel.app/post/95da5520-07e6-4962-93d3-7906d657f389)**
-- **[Harnessing the Power of Next.js with Prisma ORM](https://pyyupsk.vercel.app/post/b4d61e39-15c8-494e-acaa-f8efcd830504)**
+-   **[Understanding One-to-One and One-to-Many Relationships in Database Design](https://pyyupsk.vercel.app/post/95da5520-07e6-4962-93d3-7906d657f389)**
+-   **[Harnessing the Power of Next.js with Prisma ORM](https://pyyupsk.vercel.app/post/b4d61e39-15c8-494e-acaa-f8efcd830504)**
 
 ## 📫 How to Reach Me
 
 I’m always open to collaboration, freelancing, or just a friendly chat about coding. Feel free to connect with me through any of the following channels:
 
-- **Email**: [pyyupsk@proton.me](mailto:pyyupsk@proton.me)
-- **GitHub**: [pyyupsk](https://github.com/pyyupsk)
-- **X (Twitter)**: [@pyyupsk\_](https://x.com/pyyupsk_)
+-   **Email**: [pyyupsk@proton.me](mailto:pyyupsk@proton.me)
+-   **GitHub**: [pyyupsk](https://github.com/pyyupsk)
+-   **X (Twitter)**: [@pyyupsk_](https://x.com/pyyupsk_)
 
 ## 🤝 Let's Build Something Amazing Together!
 
