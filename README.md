@@ -58,8 +58,8 @@ Check out my latest thoughts, tutorials, and insights on my blog. I write about 
 
 ### **Latest Posts**
 
--   **[Understanding One-to-One and One-to-Many Relationships in Database Design](https://pyyupsk.vercel.app/post/95da5520-07e6-4962-93d3-7906d657f389)**
--   **[Harnessing the Power of Next.js with Prisma ORM](https://pyyupsk.vercel.app/post/b4d61e39-15c8-494e-acaa-f8efcd830504)**
+-   **[NoSQL vs SQL: Understanding the Differences and Choosing the Right Database](https://medium.com/@pthipayanate/nosql-vs-sql-understanding-the-differences-and-choosing-the-right-database-f89264154146)**
+-   **[Harnessing the Power of Next.js with Prisma ORM](https://medium.com/@pthipayanate/harnessing-the-power-of-next-js-with-prisma-orm-6bd67809bbd8)**
 
 ## 📫 How to Reach Me
 
