@@ -58,8 +58,8 @@ Check out my latest thoughts, tutorials, and insights on my blog. I write about 
 
 ### **Latest Posts**
 
--   **[NoSQL vs SQL: Understanding the Differences and Choosing the Right Database](https://medium.com/@pthipayanate/nosql-vs-sql-understanding-the-differences-and-choosing-the-right-database-f89264154146)**
--   **[Harnessing the Power of Next.js with Prisma ORM](https://medium.com/@pthipayanate/harnessing-the-power-of-next-js-with-prisma-orm-6bd67809bbd8)**
+-   **[NoSQL vs SQL: Understanding the Differences and Choosing the Right Database](https://pyyupsk.vercel.app/post/acbf958c-4049-4af0-a55f-ffa283256dda)**
+-   **[Harnessing the Power of Next.js with Prisma ORM](https://pyyupsk.vercel.app/post/9d353336-ec93-49d5-95be-45f2a11273d5)**
 
 ## 📫 How to Reach Me
 
