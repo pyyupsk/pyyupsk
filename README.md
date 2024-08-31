@@ -22,7 +22,7 @@ Welcome to my GitHub profile! I'm **Pongsakorn Thipayanate**, but you can call m
 
 ```bash
 # Clone this repository
-https://github.com/pyyupsk/personal-website.git
+git clone https://github.com/pyyupsk/personal-website.git
 cd personal-website
 
 # Install dependencies
