@@ -58,8 +58,8 @@ Check out my latest thoughts, tutorials, and insights on my blog. I write about 
 
 ### **Latest Posts**
 
+-   **[My Next.js Journey: Learning from Mistakes and Embracing New Features](https://pyyupsk.vercel.app/post/90400e85-42b7-40d1-ac86-e01242b7c5a6)**
 -   **[NoSQL vs SQL: Understanding the Differences and Choosing the Right Database](https://pyyupsk.vercel.app/post/acbf958c-4049-4af0-a55f-ffa283256dda)**
--   **[Harnessing the Power of Next.js with Prisma ORM](https://pyyupsk.vercel.app/post/9d353336-ec93-49d5-95be-45f2a11273d5)**
 
 ## 📫 How to Reach Me
 
