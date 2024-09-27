@@ -42,15 +42,15 @@ For more details, check out the [README](https://github.com/pyyupsk/personal-web
 <table>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=pyyupsk&show_icons=true&theme=onedark&hide_border=true&title_color=67b0e8&text_color=dadada&icon_color=dadada&border_color=141b1e&bg_color=141b1e" alt="Zylo's GitHub Stats">
+      <img src="https://github-readme-stats.vercel.app/api?username=pyyupsk&show_icons=true&hide_border=true&bg_color=1e1e2e&text_color=cdd6f4&icon_color=cba6f7&title_color=94e2d5" alt="pyyupsk's GitHub Stats">
     </td>
     <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=pyyupsk&theme=onedark&hide_border=true&background=141b1e&stroke=67b0e8&ring=67b0e8&fire=67b0e8&currStreakNum=dadada&sideNums=dadada&currStreakLabel=dadada&sideLabels=dadada&dates=dadada&excludeDaysLabel=dadada" alt="GitHub Streak">
+      <img src="https://streak-stats.demolab.com?user=pyyupsk&theme=catppuccin-mocha&hide_border=true" alt="pyyupsk's GitHub Streak" />
     </td>
   </tr>
 </table>
 
-![Custom Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk&bg_color=141b1e&color=dadada&line=67b0e8&point=dadada&area=true&hide_border=true)
+![Custom Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk&bg_color=1e1e2e&color=cdd6f4&line=cba6f7&point=94e2d5&area=true&hide_border=true)
 
 ## 📝 Blog & Writing
 
@@ -58,8 +58,8 @@ Check out my latest thoughts, tutorials, and insights on my blog. I write about 
 
 ### **Latest Posts**
 
--   **[My Next.js Journey: Learning from Mistakes and Embracing New Features](https://pyyupsk.vercel.app/post/90400e85-42b7-40d1-ac86-e01242b7c5a6)**
--   **[NoSQL vs SQL: Understanding the Differences and Choosing the Right Database](https://pyyupsk.vercel.app/post/acbf958c-4049-4af0-a55f-ffa283256dda)**
+-   **[Embracing Failure: What I Think to Keep Learning](https://pyyupsk.vercel.app/post/4d90a9c1-85f9-4818-a383-f89df4bc6820)**
+-   **[My WezTerm Workflow: The Blazing Fast, Mouseless Developer Setup 🚀](https://pyyupsk.vercel.app/post/b677f359-f99b-4e23-8784-d733fe5a7154)**
 
 ## 📫 How to Reach Me
 
