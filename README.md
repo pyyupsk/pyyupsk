@@ -58,6 +58,7 @@ Check out my latest thoughts, tutorials, and insights on my blog. I write about 
 
 ### **Latest Posts**
 
+-   **[Why I Switched from Prisma ORM to Drizzle ORM: A Journey Towards Simplicity and Speed 🚀](https://pyyupsk.vercel.app/post/1d1ce593-b5af-4a34-8952-2db81614035f)**
 -   **[Embracing Failure: What I Think to Keep Learning](https://pyyupsk.vercel.app/post/4d90a9c1-85f9-4818-a383-f89df4bc6820)**
 -   **[My WezTerm Workflow: The Blazing Fast, Mouseless Developer Setup 🚀](https://pyyupsk.vercel.app/post/b677f359-f99b-4e23-8784-d733fe5a7154)**
 
