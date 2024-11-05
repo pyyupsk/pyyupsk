@@ -1,0 +1,19 @@
+{
+    "name": "pyyupsk",
+    "version": "1.0.0",
+    "scripts": {
+        "blog:posts": "tsx scripts/blog-posts.ts",
+        "format": "prettier --write ."
+    },
+    "dependencies": {
+        "@neondatabase/serverless": "^0.10.1",
+        "dotenv": "^16.4.5",
+        "drizzle-orm": "^0.36.0"
+    },
+    "devDependencies": {
+        "drizzle-kit": "^0.27.1",
+        "prettier": "^3.1.0",
+        "prettier-plugin-pkg": "^0.18.1",
+        "tsx": "^4.19.2"
+    }
+}
