@@ -40,8 +40,4 @@ jobs:
               run: |
                   pnpm run blog:posts
                   pnpm run format
-                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git config --global user.name "github-actions[bot]"
-                  git add .
-                  git commit -m "docs: update posts"
-                  git push
+                  git diff --quiet || (git config --global user.email "github-actions[bot]@users.noreply.github.com" && git config --global user.name "github-actions[bot]" && git add . && git commit -m "docs: update posts" && git push)
