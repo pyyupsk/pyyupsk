@@ -6,6 +6,10 @@ on:
         - cron: '0 0 * * *'
     # manual trigger
     workflow_dispatch:
+    # re-run on push
+    push:
+        branches:
+            - main
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}

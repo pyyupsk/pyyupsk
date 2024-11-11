@@ -15,5 +15,6 @@
         "prettier": "^3.1.0",
         "prettier-plugin-pkg": "^0.18.1",
         "tsx": "^4.19.2"
-    }
+    },
+    "packageManager": "pnpm@9.12.3"
 }
