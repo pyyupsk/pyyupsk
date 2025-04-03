@@ -1,7 +1,7 @@
 # 🚀 @pyyupsk
 
 Welcome to my GitHub profile! I'm **Pongsakorn Thipayanate**, but you can call
-me **First**. I'm a 21-year-old self-taught developer passionate about coding,
+me **First**. I'm a 8106-year-old self-taught developer passionate about coding,
 reverse engineering, and building innovative projects.
 
 > "Coding from dawn till dusk, I turn ideas into reality."
