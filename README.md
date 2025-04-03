@@ -17,11 +17,11 @@ reverse engineering, and building innovative projects.
 
 ```typescript
 const skills: Record<string, string[]> = {
-  languages: ['TypeScript', 'JavaScript', 'C#', 'Python', 'Go', 'Java'],
-  frontend: ['React', 'Next.js', 'Svelte', 'Vue', 'Astro', 'Tailwind CSS'],
+  languages: ['TypeScript', 'JavaScript', 'C#', 'Rust', 'Python', 'Go'],
+  frontend: ['React', 'Next.js', 'Vue', 'Nuxt', 'Astro', 'Tailwind CSS'],
   backend: ['Node.js', 'Express.js', 'Elysia', 'Nest.js', 'tRPC'],
   databases: ['PostgreSQL', 'MySQL', 'SQLite'],
-  tools: ['Git', 'Docker', 'Vercel', 'TurboRepo', 'VS Code', 'Neovim'],
+  tools: ['Git', 'Docker', 'Vercel', 'Cloudflare', 'Turbo Repo', 'Neovim'],
 };
 ```
 
