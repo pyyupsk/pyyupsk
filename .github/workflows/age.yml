@@ -1,9 +1,9 @@
-name: 🚀 Update the posts list
+name: 🚀 Update the @pyyupsk age
 
 on:
-    # run at 00:00
+    # run at January, 23
     schedule:
-        - cron: '0 0 * * *'
+        - cron: '0 0 23 1 *'
     # manual trigger
     workflow_dispatch:
     # re-run on push
@@ -29,19 +29,18 @@ jobs:
             - uses: pnpm/action-setup@v4
               name: 🛠️ Setup pnpm
               with:
-                  version: 9.12.3
+                  version: 10
             - uses: actions/setup-node@v4
               name: 📦 Setup Node.js
               with:
-                  node-version: 20
+                  node-version: 22
                   cache: pnpm
             - name: 🔍 Install dependencies
               run: pnpm install --frozen-lockfile
-            - name: 🚀 Update posts
+            - name: 🚀 Update age
               env:
-                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |
-                  pnpm run blog:posts
+                  pnpm run update:age
                   pnpm run format
-                  git diff --quiet || (git config --global user.email "github-actions[bot]@users.noreply.github.com" && git config --global user.name "github-actions[bot]" && git add . && git commit -m "docs: update posts" && git push)
+                  git diff --quiet || (git config --global user.email "github-actions[bot]@users.noreply.github.com" && git config --global user.name "github-actions[bot]" && git add . && git commit -m "docs: update age" && git push)

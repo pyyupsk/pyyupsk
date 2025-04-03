@@ -1,0 +1,47 @@
+name: 🚀 Update the blog list
+
+on:
+    # run at 00:00
+    schedule:
+        - cron: '0 0 * * *'
+    # manual trigger
+    workflow_dispatch:
+    # re-run on push
+    push:
+        branches:
+            - main
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+        steps:
+            - uses: actions/checkout@v4
+              name: ⬇️ Checkout repository
+            - uses: pnpm/action-setup@v4
+              name: 🛠️ Setup pnpm
+              with:
+                  version: 10
+            - uses: actions/setup-node@v4
+              name: 📦 Setup Node.js
+              with:
+                  node-version: 22
+                  cache: pnpm
+            - name: 🔍 Install dependencies
+              run: pnpm install --frozen-lockfile
+            - name: 🚀 Update blog
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |
+                  pnpm run update:blog
+                  pnpm run format
+                  git diff --quiet || (git config --global user.email "github-actions[bot]@users.noreply.github.com" && git config --global user.name "github-actions[bot]" && git add . && git commit -m "docs: update posts" && git push)

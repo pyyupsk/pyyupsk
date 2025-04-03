@@ -1,8 +1,8 @@
 # 🚀 @pyyupsk
 
 Welcome to my GitHub profile! I'm **Pongsakorn Thipayanate**, but you can call
-me **First**. I'm a 21-year-old self-taught developer (as of 2024) passionate
-about coding, reverse engineering, and building innovative projects.
+me **First**. I'm a 21-year-old self-taught developer passionate about coding,
+reverse engineering, and building innovative projects.
 
 > "Coding from dawn till dusk, I turn ideas into reality."
 
@@ -16,27 +16,31 @@ about coding, reverse engineering, and building innovative projects.
 ## 🛠️ Tech Stack
 
 ```typescript
-const skills = {
-  languages: ['TypeScript', 'JavaScript', 'C#', 'Python', 'Go', 'Rust', 'SQL'],
-  frontend: ['React', 'Next.js', 'Svelte', 'Vue', 'Tailwind CSS'],
+const skills: Record<string, string[]> = {
+  languages: ['TypeScript', 'JavaScript', 'C#', 'Python', 'Go', 'Java'],
+  frontend: ['React', 'Next.js', 'Svelte', 'Vue', 'Astro', 'Tailwind CSS'],
   backend: ['Node.js', 'Express.js', 'Elysia', 'Nest.js', 'tRPC'],
   databases: ['PostgreSQL', 'MySQL', 'SQLite'],
   tools: ['Git', 'Docker', 'Vercel', 'TurboRepo', 'VS Code', 'Neovim'],
-  architecture: ['Microservices', 'REST', 'GraphQL', 'Serverless'],
 };
 ```
 
 ## 🌟 Featured Projects
 
-### [Personal Website](https://github.com/pyyupsk/personal-website)
+### [Windsurf Installer](https://github.com/pyyupsk/windsurf-installer)
 
-A modern digital playground showcasing my work and thoughts, built with:
+A simple Bash script to **install**, **update**, and **uninstall** the
+**Windsurf IDE** on Linux.
 
-- **Frontend**: Next.js, TypeScript, Tailwind CSS, Shadcn/UI
-- **Backend**: tRPC, Drizzle ORM
-- **Database**: Neon Serverless Postgres
-- **Deployment**: Vercel
-- **Status**: Active Development
+#### Features 🎉
+
+- Install or update the latest version of Windsurf IDE.
+- Verify downloads with SHA256 checksum for security.
+- Auto-create desktop integration for easy access.
+- Minimal and clear logs for success, errors, and warnings.
+
+For more details, see the full
+[documentation](https://github.com/pyyupsk/windsurf-installer).
 
 ## 📝 Latest Blog Posts
 
