@@ -27,17 +27,16 @@ const skills: Record<string, string[]> = {
 
 ## 🌟 Featured Projects
 
-### [Windsurf Installer](https://github.com/pyyupsk/windsurf-installer)
+### [🌊 Windsurf Installer](https://github.com/pyyupsk/windsurf-installer)
 
-A simple Bash script to **install**, **update**, and **uninstall** the
-**Windsurf IDE** on Linux.
+A simple Bash script to **install**, **update**, or **uninstall** the **Windsurf IDE** on Linux.
 
-#### Features 🎉
+## ✨ Features
 
-- Install or update the latest version of Windsurf IDE.
-- Verify downloads with SHA256 checksum for security.
-- Auto-create desktop integration for easy access.
-- Minimal and clear logs for success, errors, and warnings.
+- 🚀 Install or update the **latest version** of Windsurf IDE
+- 🔐 Verifies downloads using **SHA256 checksums**
+- 🖥️ Automatically creates desktop integration (icon + launcher)
+- 📋 Clean and informative logs: success ✅, errors ❌, and warnings ⚠️
 
 For more details, see the full
 [documentation](https://github.com/pyyupsk/windsurf-installer).
