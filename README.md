@@ -29,7 +29,8 @@ const skills: Record<string, string[]> = {
 
 ### [🌊 Windsurf Installer](https://github.com/pyyupsk/windsurf-installer)
 
-A simple Bash script to **install**, **update**, or **uninstall** the **Windsurf IDE** on Linux.
+A simple Bash script to **install**, **update**, or **uninstall** the **Windsurf
+IDE** on Linux.
 
 ## ✨ Features
 
