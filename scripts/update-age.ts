@@ -11,8 +11,6 @@ const run = async () => {
             (Date.now() - new Date('2003-01-23').getTime()) / (1000 * 60 * 60 * 24 * 365)
         );
 
-        // const regex = /I'm a \d+-year-old/g;
-        // const updatedReadme = readme.replace(regex, `I'm a ${age}-year-old`);
         const regex = /I'm a \d+-year-old/g;
 
         // Check if current age is same as updated age
