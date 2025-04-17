@@ -46,11 +46,8 @@ For more details, see the full
 
 <!-- START_TEMPLATE -->
 
-- **[My Vue.js Journey: The Good, The Bad & The Blazing Fast 🚀](https://pyyupsk.vercel.app/post/e4aefc4c-e392-4c51-ac4f-98c13bbed464)**
-- **[Turborepo: Accelerating Your Development Workflow 🚀](https://pyyupsk.vercel.app/post/0dc1d17e-5b62-49bb-9c4c-a2804a578f5e)**
-- **[Why I Switched from Prisma ORM to Drizzle ORM: A Journey Towards Simplicity and Speed 🚀](https://pyyupsk.vercel.app/post/1d1ce593-b5af-4a34-8952-2db81614035f)**
-- **[Embracing Failure: What I Think to Keep Learning](https://pyyupsk.vercel.app/post/4d90a9c1-85f9-4818-a383-f89df4bc6820)**
-- **[My WezTerm Workflow: The Blazing Fast, Mouseless Developer Setup 🚀](https://pyyupsk.vercel.app/post/b677f359-f99b-4e23-8784-d733fe5a7154)**
+- **[Why I Built Apex Kit Stack: A Freelancer's Journey](https://fasu.dev/blog/5bd4cab2-17dd-43aa-b8ae-166269686320)**
+- **[The Real Vue.js Dev Journey: Wins & Woes](https://fasu.dev/blog/e4aefc4c-e392-4c51-ac4f-98c13bbed464)**
 <!-- END_TEMPLATE -->
 
 ## 📊 GitHub Stats
