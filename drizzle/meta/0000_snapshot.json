@@ -1,306 +1,306 @@
 {
-    "id": "00000000-0000-0000-0000-000000000000",
-    "prevId": "",
-    "version": "7",
-    "dialect": "postgresql",
-    "tables": {
-        "public.projects": {
-            "name": "projects",
-            "schema": "",
-            "columns": {
-                "createdAt": {
-                    "name": "createdAt",
-                    "type": "timestamp",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": "now()"
-                },
-                "featured": {
-                    "name": "featured",
-                    "type": "boolean",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": false
-                },
-                "id": {
-                    "name": "id",
-                    "type": "integer",
-                    "primaryKey": true,
-                    "notNull": true,
-                    "identity": {
-                        "type": "always",
-                        "name": "projects_id_seq",
-                        "increment": "1",
-                        "minValue": "1",
-                        "maxValue": "2147483647",
-                        "startWith": "1",
-                        "cache": "1",
-                        "cycle": false,
-                        "schema": "public"
-                    }
-                },
-                "name": {
-                    "name": "name",
-                    "type": "varchar",
-                    "primaryKey": false,
-                    "notNull": true
-                },
-                "thumbnail": {
-                    "name": "thumbnail",
-                    "type": "varchar",
-                    "primaryKey": false,
-                    "notNull": true
-                },
-                "url": {
-                    "name": "url",
-                    "type": "varchar",
-                    "primaryKey": false,
-                    "notNull": true
-                }
-            },
-            "indexes": {},
-            "foreignKeys": {},
-            "compositePrimaryKeys": {},
-            "uniqueConstraints": {},
-            "checkConstraints": {},
-            "policies": {},
-            "isRLSEnabled": false
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.projects": {
+      "name": "projects",
+      "schema": "",
+      "columns": {
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
         },
-        "public.project_tags": {
-            "name": "project_tags",
-            "schema": "",
-            "columns": {
-                "createdAt": {
-                    "name": "createdAt",
-                    "type": "timestamp",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": "now()"
-                },
-                "id": {
-                    "name": "id",
-                    "type": "integer",
-                    "primaryKey": true,
-                    "notNull": true,
-                    "identity": {
-                        "type": "always",
-                        "name": "project_tags_id_seq",
-                        "increment": "1",
-                        "minValue": "1",
-                        "maxValue": "2147483647",
-                        "startWith": "1",
-                        "cache": "1",
-                        "cycle": false,
-                        "schema": "public"
-                    }
-                },
-                "project_id": {
-                    "name": "project_id",
-                    "type": "integer",
-                    "primaryKey": false,
-                    "notNull": true
-                },
-                "tag_id": {
-                    "name": "tag_id",
-                    "type": "integer",
-                    "primaryKey": false,
-                    "notNull": true
-                }
-            },
-            "indexes": {},
-            "foreignKeys": {
-                "project_tags_project_id_projects_id_fk": {
-                    "name": "project_tags_project_id_projects_id_fk",
-                    "tableFrom": "project_tags",
-                    "tableTo": "projects",
-                    "schemaTo": "public",
-                    "columnsFrom": ["project_id"],
-                    "columnsTo": ["id"],
-                    "onDelete": "no action",
-                    "onUpdate": "no action"
-                },
-                "project_tags_tag_id_tags_id_fk": {
-                    "name": "project_tags_tag_id_tags_id_fk",
-                    "tableFrom": "project_tags",
-                    "tableTo": "tags",
-                    "schemaTo": "public",
-                    "columnsFrom": ["tag_id"],
-                    "columnsTo": ["id"],
-                    "onDelete": "no action",
-                    "onUpdate": "no action"
-                }
-            },
-            "compositePrimaryKeys": {},
-            "uniqueConstraints": {},
-            "checkConstraints": {},
-            "policies": {},
-            "isRLSEnabled": false
+        "featured": {
+          "name": "featured",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
         },
-        "public.tags": {
-            "name": "tags",
-            "schema": "",
-            "columns": {
-                "createdAt": {
-                    "name": "createdAt",
-                    "type": "timestamp",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": "now()"
-                },
-                "id": {
-                    "name": "id",
-                    "type": "integer",
-                    "primaryKey": true,
-                    "notNull": true,
-                    "identity": {
-                        "type": "always",
-                        "name": "tags_id_seq",
-                        "increment": "1",
-                        "minValue": "1",
-                        "maxValue": "2147483647",
-                        "startWith": "1",
-                        "cache": "1",
-                        "cycle": false,
-                        "schema": "public"
-                    }
-                },
-                "name": {
-                    "name": "name",
-                    "type": "varchar",
-                    "primaryKey": false,
-                    "notNull": true
-                }
-            },
-            "indexes": {},
-            "foreignKeys": {},
-            "compositePrimaryKeys": {},
-            "uniqueConstraints": {},
-            "checkConstraints": {},
-            "policies": {},
-            "isRLSEnabled": false
-        },
-        "public.blog": {
-            "name": "blog",
-            "schema": "",
-            "columns": {
-                "createdAt": {
-                    "name": "createdAt",
-                    "type": "timestamp",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": "now()"
-                },
-                "description": {
-                    "name": "description",
-                    "type": "varchar",
-                    "primaryKey": false,
-                    "notNull": false
-                },
-                "id": {
-                    "name": "id",
-                    "type": "uuid",
-                    "primaryKey": true,
-                    "notNull": true,
-                    "default": "gen_random_uuid()"
-                },
-                "status": {
-                    "name": "status",
-                    "type": "status",
-                    "typeSchema": "public",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": "'draft'"
-                },
-                "title": {
-                    "name": "title",
-                    "type": "varchar",
-                    "primaryKey": false,
-                    "notNull": true
-                }
-            },
-            "indexes": {},
-            "foreignKeys": {},
-            "compositePrimaryKeys": {},
-            "uniqueConstraints": {},
-            "checkConstraints": {},
-            "policies": {},
-            "isRLSEnabled": false
-        },
-        "public.blog_content": {
-            "name": "blog_content",
-            "schema": "",
-            "columns": {
-                "blog_id": {
-                    "name": "blog_id",
-                    "type": "uuid",
-                    "primaryKey": false,
-                    "notNull": true
-                },
-                "content": {
-                    "name": "content",
-                    "type": "varchar",
-                    "primaryKey": false,
-                    "notNull": true
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "type": "timestamp",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": "now()"
-                },
-                "id": {
-                    "name": "id",
-                    "type": "integer",
-                    "primaryKey": true,
-                    "notNull": true,
-                    "identity": {
-                        "type": "always",
-                        "name": "blog_content_id_seq",
-                        "increment": "1",
-                        "minValue": "1",
-                        "maxValue": "2147483647",
-                        "startWith": "1",
-                        "cache": "1",
-                        "cycle": false,
-                        "schema": "public"
-                    }
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "type": "timestamp",
-                    "primaryKey": false,
-                    "notNull": true,
-                    "default": "now()"
-                }
-            },
-            "indexes": {},
-            "foreignKeys": {},
-            "compositePrimaryKeys": {},
-            "uniqueConstraints": {},
-            "checkConstraints": {},
-            "policies": {},
-            "isRLSEnabled": false
-        }
-    },
-    "enums": {
-        "public.status": {
-            "name": "status",
-            "values": ["draft", "published", "archived"],
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "projects_id_seq",
+            "increment": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "startWith": "1",
+            "cache": "1",
+            "cycle": false,
             "schema": "public"
+          }
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "thumbnail": {
+          "name": "thumbnail",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "url": {
+          "name": "url",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
         }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
     },
-    "schemas": {},
-    "sequences": {},
-    "roles": {},
-    "policies": {},
-    "views": {},
-    "_meta": {
-        "schemas": {},
-        "tables": {},
-        "columns": {}
+    "public.project_tags": {
+      "name": "project_tags",
+      "schema": "",
+      "columns": {
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "project_tags_id_seq",
+            "increment": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "startWith": "1",
+            "cache": "1",
+            "cycle": false,
+            "schema": "public"
+          }
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tag_id": {
+          "name": "tag_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "project_tags_project_id_projects_id_fk": {
+          "name": "project_tags_project_id_projects_id_fk",
+          "tableFrom": "project_tags",
+          "tableTo": "projects",
+          "schemaTo": "public",
+          "columnsFrom": ["project_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "project_tags_tag_id_tags_id_fk": {
+          "name": "project_tags_tag_id_tags_id_fk",
+          "tableFrom": "project_tags",
+          "tableTo": "tags",
+          "schemaTo": "public",
+          "columnsFrom": ["tag_id"],
+          "columnsTo": ["id"],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
     },
-    "internal": {
-        "tables": {}
+    "public.tags": {
+      "name": "tags",
+      "schema": "",
+      "columns": {
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "tags_id_seq",
+            "increment": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "startWith": "1",
+            "cache": "1",
+            "cycle": false,
+            "schema": "public"
+          }
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    },
+    "public.blog": {
+      "name": "blog",
+      "schema": "",
+      "columns": {
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "description": {
+          "name": "description",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "status": {
+          "name": "status",
+          "type": "status",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'draft'"
+        },
+        "title": {
+          "name": "title",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    },
+    "public.blog_content": {
+      "name": "blog_content",
+      "schema": "",
+      "columns": {
+        "blog_id": {
+          "name": "blog_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "content": {
+          "name": "content",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "identity": {
+            "type": "always",
+            "name": "blog_content_id_seq",
+            "increment": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "startWith": "1",
+            "cache": "1",
+            "cycle": false,
+            "schema": "public"
+          }
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
     }
+  },
+  "enums": {
+    "public.status": {
+      "name": "status",
+      "values": ["draft", "published", "archived"],
+      "schema": "public"
+    }
+  },
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {}
+  }
 }

@@ -1,20 +1,20 @@
 {
-    "$schema": "https://json.schemastore.org/prettierrc",
-    "semi": true,
-    "tabWidth": 4,
-    "singleQuote": true,
-    "printWidth": 100,
-    "trailingComma": "es5",
-    "proseWrap": "always",
-    "overrides": [
-        {
-            "files": "*.md",
-            "options": {
-                "tabWidth": 2,
-                "printWidth": 80,
-                "proseWrap": "always",
-                "useTabs": false
-            }
-        }
-    ]
+  "$schema": "https://json.schemastore.org/prettierrc",
+  "semi": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "printWidth": 100,
+  "trailingComma": "es5",
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "tabWidth": 2,
+        "printWidth": 80,
+        "proseWrap": "always",
+        "useTabs": false
+      }
+    }
+  ]
 }
