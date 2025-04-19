@@ -66,7 +66,7 @@ For more details, see the full
 I'm always excited to collaborate on interesting projects and exchange ideas.
 Reach out through:
 
-[![Email](https://img.shields.io/badge/Email-pyyupsk%40proton.me-blue?style=flat-square&logo=protonmail)](mailto:contact@fasu.dev)
+[![Email](https://img.shields.io/badge/Email-contact%40fasu.dev-blue?style=flat-square&logo=gmail)](mailto:contact@fasu.dev)
 [![GitHub](https://img.shields.io/badge/GitHub-pyyupsk-black?style=flat-square&logo=github)](https://github.com/pyyupsk)
 [![Twitter](https://img.shields.io/badge/Twitter-@pyyupsk__-blue?style=flat-square&logo=twitter)](https://x.com/pyyupsk_)
 
