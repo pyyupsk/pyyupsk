@@ -46,6 +46,7 @@ For more details, see the full
 
 <!-- START_TEMPLATE -->
 
+- **[Tired of Vue Boilerplate? Here’s My Clean, Fast Setup](https://fasu.dev/blog/b3ae3bf2-2dde-45f2-bf93-6b437ecf72ad)**
 - **[Why I Built Apex Kit Stack: A Freelancer's Journey](https://fasu.dev/blog/5bd4cab2-17dd-43aa-b8ae-166269686320)**
 - **[The Real Vue.js Dev Journey: Wins & Woes](https://fasu.dev/blog/e4aefc4c-e392-4c51-ac4f-98c13bbed464)**
 <!-- END_TEMPLATE -->
