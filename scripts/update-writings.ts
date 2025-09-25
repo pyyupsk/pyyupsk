@@ -1,79 +1,43 @@
 import path from "node:path";
+import Parser from "rss-parser";
 
 const RSS_URL = "https://fasu.dev/rss.xml";
 const README_PATH = path.join(process.cwd(), "README.md");
 const MAX_POSTS = 5; // Number of latest posts to display
 
-interface BlogPost {
-  title: string;
-  link: string;
-  pubDate: string;
-}
+type RSSFeed = {
+  items: {
+    title: string;
+    link: string;
+    pubDate: string;
+    isoDate: string;
+  }[];
+};
 
-function extractField(content: string, pattern: RegExp): string {
-  const match = pattern.exec(content);
-  return match?.[1] ?? "";
-}
-
-function parseRSSItem(itemContent: string): BlogPost | null {
-  const title = extractField(
-    itemContent,
-    /<title><!\[CDATA\[(.*?)\]\]><\/title>/,
-  );
-  const link = extractField(itemContent, /<link>(.*?)<\/link>/);
-  const pubDate = extractField(itemContent, /<pubDate>(.*?)<\/pubDate>/);
-
-  // Only include posts from /writings/ path
-  if (!title || !link?.includes("/writings/")) {
-    return null;
-  }
-
-  return {
-    title,
-    link,
-    pubDate: pubDate || new Date().toISOString(),
-  };
-}
-
-function parseRSSItems(rssText: string): BlogPost[] {
-  const posts: BlogPost[] = [];
-  const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-
-  let match = itemRegex.exec(rssText);
-  while (match !== null) {
-    const itemContent = match[1];
-    if (itemContent) {
-      const post = parseRSSItem(itemContent);
-      if (post) {
-        posts.push(post);
-      }
-    }
-    match = itemRegex.exec(rssText);
-  }
-
-  return posts;
-}
-
-async function fetchRSSFeed(): Promise<BlogPost[]> {
+async function fetchWritingsPosts(): Promise<RSSFeed["items"]> {
   try {
     console.log("🌐 Fetching RSS feed...");
-    const response = await fetch(RSS_URL);
 
-    if (!response.ok) {
-      throw new Error(
-        `Failed to fetch RSS: ${response.status} ${response.statusText}`,
-      );
-    }
+    const parser = new Parser<RSSFeed>();
+    const feed = (await parser.parseURL(RSS_URL)) as RSSFeed;
 
-    const rssText = await response.text();
-    const posts = parseRSSItems(rssText);
+    // Filter posts from /writings/ path and map to our interface
+    const writingsPosts = feed.items
+      .filter((item) => item.link?.includes("/writings/"))
+      .map((item) => ({
+        ...item,
+        title: item.title || "",
+        link: item.link || "",
+        pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
+      }))
+      // Sort by publication date (newest first)
+      .sort(
+        (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
+      )
+      // Take only the latest posts
+      .slice(0, MAX_POSTS);
 
-    // Sort by publication date (newest first)
-    posts.sort(
-      (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
-    );
-
-    return posts.slice(0, MAX_POSTS);
+    return writingsPosts;
   } catch (error) {
     console.error("❌ Error fetching RSS feed:", error);
     throw error;
@@ -85,8 +49,8 @@ async function fetchRSSFeed(): Promise<BlogPost[]> {
     console.log("📝 Starting writings update...");
 
     // Fetch latest posts from RSS
-    const posts = await fetchRSSFeed();
-    console.log(`📚 Found ${posts.length} recent posts`);
+    const posts = await fetchWritingsPosts();
+    console.log(`📚 Found ${posts.length} recent writings posts`);
 
     // Read current README
     console.log("📖 Reading README.md...");
