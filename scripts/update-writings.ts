@@ -44,66 +44,64 @@ async function fetchWritingsPosts(): Promise<RSSFeed["items"]> {
   }
 }
 
-(async () => {
-  try {
-    console.log("📝 Starting writings update...");
+try {
+  console.log("📝 Starting writings update...");
 
-    // Fetch latest posts from RSS
-    const posts = await fetchWritingsPosts();
-    console.log(`📚 Found ${posts.length} recent writings posts`);
+  // Fetch latest posts from RSS
+  const posts = await fetchWritingsPosts();
+  console.log(`📚 Found ${posts.length} recent writings posts`);
 
-    // Read current README
-    console.log("📖 Reading README.md...");
-    const readmeFile = Bun.file(README_PATH);
-    const readmeContent = await readmeFile.text();
+  // Read current README
+  console.log("📖 Reading README.md...");
+  const readmeFile = Bun.file(README_PATH);
+  const readmeContent = await readmeFile.text();
 
-    // Find the template markers
-    const startMarker = "<!-- START_WRITINGS_TEMPLATE -->";
-    const endMarker = "<!-- END_WRITINGS_TEMPLATE -->";
+  // Find the template markers
+  const startMarker = "<!-- START_WRITINGS_TEMPLATE -->";
+  const endMarker = "<!-- END_WRITINGS_TEMPLATE -->";
 
-    const startIndex = readmeContent.indexOf(startMarker);
-    const endIndex = readmeContent.indexOf(endMarker);
+  const startIndex = readmeContent.indexOf(startMarker);
+  const endIndex = readmeContent.indexOf(endMarker);
 
-    if (startIndex === -1 || endIndex === -1) {
-      console.error("❌ Template markers not found in README.md");
-      console.log("Make sure your README contains:");
-      console.log("<!-- START_WRITINGS_TEMPLATE -->");
-      console.log("<!-- END_WRITINGS_TEMPLATE -->");
-      process.exit(1);
-    }
-
-    // Generate new posts content
-    const postsContent = posts
-      .map((post) => {
-        // Clean the link - ensure it doesn't have double slashes except after protocol
-        const cleanLink = post.link.replace(/([^:])\/\//g, "$1/");
-        return `- **[${post.title}](${cleanLink})**`;
-      })
-      .join("\n");
-
-    const newContent = `${startMarker}\n${postsContent}\n${endMarker}`;
-
-    // Check if content needs updating
-    const currentSection = readmeContent.substring(
-      startIndex,
-      endIndex + endMarker.length,
-    );
-    if (currentSection === newContent) {
-      console.log("✅ Writings are already up to date");
-      return;
-    }
-
-    // Update README
-    const updatedContent =
-      readmeContent.substring(0, startIndex) +
-      newContent +
-      readmeContent.substring(endIndex + endMarker.length);
-
-    console.log("✏️ Writing updated README.md...");
-    await Bun.write(README_PATH, updatedContent);
-    console.log("✅ README.md updated successfully with latest writings");
-  } catch (error) {
-    console.error("❌ Error updating writings:", error);
+  if (startIndex === -1 || endIndex === -1) {
+    console.error("❌ Template markers not found in README.md");
+    console.log("Make sure your README contains:");
+    console.log("<!-- START_WRITINGS_TEMPLATE -->");
+    console.log("<!-- END_WRITINGS_TEMPLATE -->");
     process.exit(1);
   }
-})();
+
+  // Generate new posts content
+  const postsContent = posts
+    .map((post) => {
+      // Clean the link - ensure it doesn't have double slashes except after protocol
+      const cleanLink = post.link.replaceAll(/([^:])\/\//g, "$1/");
+      return `- **[${post.title}](${cleanLink})**`;
+    })
+    .join("\n");
+
+  const newContent = `${startMarker}\n${postsContent}\n${endMarker}`;
+
+  // Check if content needs updating
+  const currentSection = readmeContent.substring(
+    startIndex,
+    endIndex + endMarker.length,
+  );
+  if (currentSection === newContent) {
+    console.log("✅ Writings are already up to date");
+    process.exit(0);
+  }
+
+  // Update README
+  const updatedContent =
+    readmeContent.substring(0, startIndex) +
+    newContent +
+    readmeContent.substring(endIndex + endMarker.length);
+
+  console.log("✏️ Writing updated README.md...");
+  await Bun.write(README_PATH, updatedContent);
+  console.log("✅ README.md updated successfully with latest writings");
+} catch (error) {
+  console.error("❌ Error updating writings:", error);
+  process.exit(1);
+}
