@@ -1,7 +1,7 @@
 # 🚀 @pyyupsk
 
 Welcome to my GitHub profile! I'm **Pongsakorn Thipayanate**, but you can call
-me **First**. I'm a 22-year-old self-taught developer passionate about coding,
+me **First** or **Yu**. I'm a 22-year-old self-taught developer passionate about coding,
 reverse engineering, and building innovative projects.
 
 > "Coding from dawn till dusk, I turn ideas into reality."
@@ -42,15 +42,15 @@ IDE** on Linux.
 For more details, see the full
 [documentation](https://github.com/pyyupsk/windsurf-installer).
 
-## 📝 Latest Blog Posts
+## 📝 Latest Writings
 
-<!-- START_TEMPLATE -->
-
-- **[When Node.js Devs Venture into Python Territory: A Cross-Ecosystem Journey](https://fasu.dev/blog/19c32399-68a3-4d24-830a-0d0b2c01f543)**
-- **[Tired of Vue Boilerplate? Here’s My Clean, Fast Setup](https://fasu.dev/blog/b3ae3bf2-2dde-45f2-bf93-6b437ecf72ad)**
-- **[Why I Built Apex Kit Stack: A Freelancer's Journey](https://fasu.dev/blog/5bd4cab2-17dd-43aa-b8ae-166269686320)**
-- **[The Real Vue.js Dev Journey: Wins & Woes](https://fasu.dev/blog/e4aefc4c-e392-4c51-ac4f-98c13bbed464)**
-<!-- END_TEMPLATE -->
+<!-- START_WRITINGS_TEMPLATE -->
+- **[The Art of Clean Feature Architecture: What I Actually Build](https://fasu.dev/writings/the-art-of-clean-feature-architecture-what-i-actually-build)**
+- **[When Node.js Devs Venture into Python Territory: A Cross-Ecosystem Journey](https://fasu.dev/writings/when-node-js-devs-venture-into-python-territory-a-cross-ecosystem-journey)**
+- **[Tired of Vue Boilerplate? Here's My Clean, Fast Setup](https://fasu.dev/writings/tired-of-vue-boilerplate-here-s-my-clean-fast-setup)**
+- **[Why I Built Apex Kit Stack: A Freelancer's Journey](https://fasu.dev/writings/why-i-built-apex-kit-stack-a-freelancer-s-journey)**
+- **[The Real Vue.js Dev Journey: Wins & Woes](https://fasu.dev/writings/the-real-vue-js-dev-journey-wins-woes)**
+<!-- END_WRITINGS_TEMPLATE -->
 
 ## 📊 GitHub Stats
 
@@ -63,7 +63,7 @@ For more details, see the full
 
 </div>
 
-## 🤝 Let's Connect!
+## 🤝 Let's Connect
 
 I'm always excited to collaborate on interesting projects and exchange ideas.
 Reach out through:
@@ -76,7 +76,8 @@ Reach out through:
 
 <div align="center">
   
-### 💡 Open to new opportunities and collaborations!
+### 💡 Open to new opportunities and collaborations
+
 Let's build something amazing together. Whether it's an open-source project or an innovative idea, I'm all ears!
 
 </div>

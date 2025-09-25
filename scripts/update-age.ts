@@ -1,32 +1,57 @@
-import fs from 'fs';
-import path from 'path';
+import path from "node:path";
 
-const readmePath = path.join(process.cwd(), 'README.md');
-const readme = fs.readFileSync(readmePath, 'utf-8');
+const BIRTH_DATE = new Date("2003-01-23");
+const README_PATH = path.join(process.cwd(), "README.md");
 
-const run = async () => {
+function calculateAge(birthDate: Date): number {
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (
+    monthDiff < 0 ||
+    (monthDiff === 0 && today.getDate() < birthDate.getDate())
+  ) {
+    age--;
+  }
+
+  return age;
+}
+
+(async () => {
   try {
-    console.log('Updating age in README.md...');
-    const age = Math.floor(
-      (Date.now() - new Date('2003-01-23').getTime()) / (1000 * 60 * 60 * 24 * 365)
-    );
+    console.log("📅 Calculating current age...");
+    const currentAge = calculateAge(BIRTH_DATE);
+    console.log(`🎂 Current age: ${currentAge}`);
 
-    const regex = /I'm a \d+-year-old/g;
+    console.log("📖 Reading README.md...");
+    const readmeFile = Bun.file(README_PATH);
+    const readmeContent = await readmeFile.text();
 
-    // Check if current age is same as updated age
-    const currentAge = readme.match(regex)?.[0].replace("I'm a ", '').replace('-year-old', '');
-    if (currentAge === age.toString()) {
-      console.log('Age already up-to-date in README.md');
+    // Pattern to match age in the format "I'm a XX-year-old"
+    const agePattern = /I'm a \d+-year-old/g;
+
+    // Check if age needs updating
+    const currentAgeString = `I'm a ${currentAge}-year-old`;
+    if (readmeContent.includes(currentAgeString)) {
+      console.log("✅ Age is already up to date");
       return;
     }
 
-    const updatedReadme = readme.replace(regex, `I'm a ${age}-year-old`);
+    // Update the age
+    const updatedContent = readmeContent.replace(agePattern, currentAgeString);
 
-    fs.writeFileSync(readmePath, updatedReadme);
-    console.log('Age updated in README.md');
+    // Check if any changes were made
+    if (updatedContent === readmeContent) {
+      console.log("⚠️ No age pattern found in README.md");
+      return;
+    }
+
+    console.log("✏️ Writing updated README.md...");
+    await Bun.write(README_PATH, updatedContent);
+    console.log("✅ README.md updated successfully with current age");
   } catch (error) {
-    console.error('Error updating age in README.md:', error);
+    console.error("❌ Error updating age:", error);
+    process.exit(1);
   }
-};
-
-run();
+})();
