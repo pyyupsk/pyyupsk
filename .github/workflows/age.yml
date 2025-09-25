@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v5.0.0
         name: ⬇️ Checkout repository
 
-      - uses: oven-sh/setup-bun@v2.0.2
+      - uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76
         name: 🥟 Setup Bun
 
       - name: 🎂 Update age
