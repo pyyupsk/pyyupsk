@@ -10,6 +10,50 @@ interface BlogPost {
   pubDate: string;
 }
 
+function extractField(content: string, pattern: RegExp): string {
+  const match = pattern.exec(content);
+  return match?.[1] ?? "";
+}
+
+function parseRSSItem(itemContent: string): BlogPost | null {
+  const title = extractField(
+    itemContent,
+    /<title><!\[CDATA\[(.*?)\]\]><\/title>/,
+  );
+  const link = extractField(itemContent, /<link>(.*?)<\/link>/);
+  const pubDate = extractField(itemContent, /<pubDate>(.*?)<\/pubDate>/);
+
+  // Only include posts from /writings/ path
+  if (!title || !link?.includes("/writings/")) {
+    return null;
+  }
+
+  return {
+    title,
+    link,
+    pubDate: pubDate || new Date().toISOString(),
+  };
+}
+
+function parseRSSItems(rssText: string): BlogPost[] {
+  const posts: BlogPost[] = [];
+  const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+
+  let match = itemRegex.exec(rssText);
+  while (match !== null) {
+    const itemContent = match[1];
+    if (itemContent) {
+      const post = parseRSSItem(itemContent);
+      if (post) {
+        posts.push(post);
+      }
+    }
+    match = itemRegex.exec(rssText);
+  }
+
+  return posts;
+}
+
 async function fetchRSSFeed(): Promise<BlogPost[]> {
   try {
     console.log("🌐 Fetching RSS feed...");
@@ -22,45 +66,7 @@ async function fetchRSSFeed(): Promise<BlogPost[]> {
     }
 
     const rssText = await response.text();
-
-    // Parse RSS XML
-    const posts: BlogPost[] = [];
-
-    // Extract items from RSS
-    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-    let match: RegExpExecArray | null;
-
-    match = itemRegex.exec(rssText);
-    while (match !== null) {
-      const itemContent = match[1];
-
-      if (itemContent) {
-        // Extract title
-        const titleMatch = itemContent.match(
-          /<title><!\[CDATA\[(.*?)\]\]><\/title>/,
-        );
-        const title = titleMatch ? titleMatch[1] : "";
-
-        // Extract link
-        const linkMatch = itemContent.match(/<link>(.*?)<\/link>/);
-        const link = linkMatch ? linkMatch[1] : "";
-
-        // Extract publication date
-        const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/);
-        const pubDate = pubDateMatch ? pubDateMatch[1] : "";
-
-        // Only include posts from /writings/ path
-        if (title && link && link.includes("/writings/")) {
-          posts.push({
-            title: title || "",
-            link: link || "",
-            pubDate: pubDate || new Date().toISOString(),
-          });
-        }
-      }
-
-      match = itemRegex.exec(rssText);
-    }
+    const posts = parseRSSItems(rssText);
 
     // Sort by publication date (newest first)
     posts.sort(
