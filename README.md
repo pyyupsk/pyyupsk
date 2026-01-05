@@ -45,10 +45,10 @@ For more details, see the full
 ## 📝 Latest Writings
 
 <!-- START_WRITINGS_TEMPLATE -->
+- **[From requirements.txt to pyproject.toml: My Python Evolution](https://fasu.dev/writings/from-requirements-txt-to-pyproject-toml-my-python-evolution)**
 - **[The Art of Clean Feature Architecture: What I Actually Build](https://fasu.dev/writings/the-art-of-clean-feature-architecture-what-i-actually-build)**
 - **[When Node.js Devs Venture into Python Territory: A Cross-Ecosystem Journey](https://fasu.dev/writings/when-node-js-devs-venture-into-python-territory-a-cross-ecosystem-journey)**
 - **[Tired of Vue Boilerplate? Here's My Clean, Fast Setup](https://fasu.dev/writings/tired-of-vue-boilerplate-here-s-my-clean-fast-setup)**
-- **[Why I Built Apex Kit Stack: A Freelancer's Journey](https://fasu.dev/writings/why-i-built-apex-kit-stack-a-freelancer-s-journey)**
 - **[The Real Vue.js Dev Journey: Wins & Woes](https://fasu.dev/writings/the-real-vue-js-dev-journey-wins-woes)**
 <!-- END_WRITINGS_TEMPLATE -->
 
