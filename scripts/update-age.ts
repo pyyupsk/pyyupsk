@@ -32,10 +32,10 @@ async function main(): Promise<void> {
   logger.info("Reading README.md...");
   const readmeContent = await safeRead(README_PATH);
 
-  // Pattern to match age in the format "I'm a XX-year-old"
-  const agePattern = /I'm a \d+-year-old/g;
+  // Pattern to match age in the format "a XX-year-old"
+  const agePattern = /a \d+-year-old/g;
 
-  const currentAgeString = `I'm a ${currentAge}-year-old`;
+  const currentAgeString = `a ${currentAge}-year-old`;
   if (readmeContent.includes(currentAgeString)) {
     logger.success("Age is already up to date");
     process.exit(0);
@@ -45,9 +45,7 @@ async function main(): Promise<void> {
 
   if (updatedContent === readmeContent) {
     logger.warn("No age pattern found in README.md");
-    logger.info(
-      'Hint: Ensure README.md contains text like "I\'m a XX-year-old"',
-    );
+    logger.info('Hint: Ensure README.md contains text like "a XX-year-old"');
     process.exit(0);
   }
 
@@ -56,7 +54,8 @@ async function main(): Promise<void> {
   logger.success("README.md updated successfully with current age");
 }
 
-main().catch((error: unknown) => { // NOSONAR
+main().catch((error: unknown) => {
+  // NOSONAR
   const errorMessage = error instanceof Error ? error.message : String(error);
   logger.error(`Failed to update age: ${errorMessage}`);
 
@@ -66,7 +65,7 @@ main().catch((error: unknown) => { // NOSONAR
 
   logger.info("To resolve this issue:");
   logger.info("1. Ensure README.md exists in the repository root");
-  logger.info('2. Ensure it contains text like "I\'m a XX-year-old"');
+  logger.info('2. Ensure it contains text like "a XX-year-old"');
   logger.info("3. Run the script from the repository root directory");
 
   process.exit(1);

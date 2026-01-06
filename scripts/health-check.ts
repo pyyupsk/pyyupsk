@@ -226,7 +226,8 @@ async function main(): Promise<void> {
   process.exit(0);
 }
 
-main().catch((error: unknown) => { // NOSONAR
+main().catch((error: unknown) => {
+  // NOSONAR
   const errorMessage = error instanceof Error ? error.message : String(error);
   logger.error(`Health check failed: ${errorMessage}`);
 

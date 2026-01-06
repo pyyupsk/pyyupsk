@@ -1,48 +1,52 @@
-# 🚀 @pyyupsk
+<div align="center">
 
-Welcome to my GitHub profile! I'm **Pongsakorn Thipayanate**, but you can call
-me **First** or **Yu**. I'm a 22-year-old self-taught developer passionate about coding,
-reverse engineering, and building innovative projects.
-
-> "Coding from dawn till dusk, I turn ideas into reality."
-
-## 🎯 About Me
-
-- 💻 Full-stack developer specializing in TypeScript and modern web technologies
-- 🔧 Love building efficient, scalable, and user-friendly applications
-- 📚 Continuous learner and open-source enthusiast
-- 🌱 Currently focused on performance optimization and system architecture
-
-## 🛠️ Tech Stack
-
-```typescript
-const skills: Record<string, string[]> = {
-  languages: ["TypeScript", "JavaScript", "C#", "Rust", "Python", "Go"],
-  frontend: ["React", "Next.js", "Vue", "Nuxt", "Astro", "Tailwind CSS"],
-  backend: ["Node.js", "Express.js", "Elysia", "Nest.js", "tRPC"],
-  databases: ["PostgreSQL", "MySQL", "SQLite"],
-  tools: ["Git", "Docker", "Vercel", "Cloudflare", "Turbo Repo", "Neovim"],
-};
+```
+██████╗ ██╗   ██╗██╗   ██╗██╗   ██╗██████╗ ███████╗██╗  ██╗
+██╔══██╗╚██╗ ██╔╝╚██╗ ██╔╝██║   ██║██╔══██╗██╔════╝██║ ██╔╝
+██████╔╝ ╚████╔╝  ╚████╔╝ ██║   ██║██████╔╝███████╗█████╔╝
+██╔═══╝   ╚██╔╝    ╚██╔╝  ██║   ██║██╔═══╝ ╚════██║██╔═██╗
+██║        ██║      ██║   ╚██████╔╝██║     ███████║██║  ██╗
+╚═╝        ╚═╝      ╚═╝    ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝
 ```
 
-## 🌟 Featured Projects
+**Self-taught developer crafting digital experiences**
 
-### [🌊 Windsurf Installer](https://github.com/pyyupsk/windsurf-installer)
+![Repos](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2Fpyyupsk&query=%24.public_repos&style=flat-square&label=repos&color=58a6ff&labelColor=0d1117)
+![Followers](https://img.shields.io/github/followers/pyyupsk?style=flat-square&color=58a6ff&labelColor=0d1117)
+![Stars](https://img.shields.io/github/stars/pyyupsk?style=flat-square&color=58a6ff&labelColor=0d1117&label=total%20stars)
 
-A simple Bash script to **install**, **update**, or **uninstall** the **Windsurf
-IDE** on Linux.
+[![Email](https://img.shields.io/badge/contact@fasu.dev-0d1117?style=flat-square&logo=gmail&logoColor=58a6ff)](mailto:contact@fasu.dev)
+[![Twitter](https://img.shields.io/badge/@pyyupsk__-0d1117?style=flat-square&logo=x&logoColor=58a6ff)](https://x.com/pyyupsk_)
+[![Bluesky](https://img.shields.io/badge/@fasu.dev-0d1117?style=flat-square&logo=bluesky&logoColor=58a6ff)](https://bsky.app/profile/fasu.dev)
+[![Website](https://img.shields.io/badge/fasu.dev-0d1117?style=flat-square&logo=safari&logoColor=58a6ff)](https://fasu.dev)
 
-## ✨ Features
+</div>
 
-- 🚀 Install or update the **latest version** of Windsurf IDE
-- 🔐 Verifies downloads using **SHA256 checksums**
-- 🖥️ Automatically creates desktop integration (icon + launcher)
-- 📋 Clean and informative logs: success ✅, errors ❌, and warnings ⚠️
+---
 
-For more details, see the full
-[documentation](https://github.com/pyyupsk/windsurf-installer).
+### About
 
-## 📝 Latest Writings
+I'm **First** — a 22-year-old developer from Thailand passionate about building elegant, performant software. I specialize in TypeScript ecosystems and love exploring the intersection of developer experience and system design.
+
+Currently focused on **performance optimization** and **system architecture**.
+
+---
+
+### Stack
+
+```ts
+const stack = {
+  languages: ["TypeScript", "Rust", "Go", "Python", "C#"],
+  frontend: ["React", "Next.js", "Vue", "Nuxt", "Astro"],
+  backend: ["Node.js", "Elysia", "Nest.js", "tRPC"],
+  database: ["PostgreSQL", "MySQL", "SQLite"],
+  tools: ["Neovim", "Docker", "Vercel", "Cloudflare"],
+} as const;
+```
+
+---
+
+### Writings
 
 <!-- START_WRITINGS_TEMPLATE -->
 
@@ -53,32 +57,23 @@ For more details, see the full
 - **[The Real Vue.js Dev Journey: Wins & Woes](https://fasu.dev/writings/the-real-vue-js-dev-journey-wins-woes)**
 <!-- END_WRITINGS_TEMPLATE -->
 
-## 📊 GitHub Stats
+---
+
+### Stats
 
 <div align="center">
-  
+
 | ![GitHub Stats](https://awesome-github-stats.azurewebsites.net/user-stats/pyyupsk?cardType=level&Background=0d1117&Text=c9d1d9&Title=58a6ff&Ring=58a6ff&Border=0d1117) | ![GitHub Streak](https://github-readme-streak-stats-eight.vercel.app?user=pyyupsk&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=6e7681&border=0d1117) |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk&bg_color=0d1117&color=c9d1d9&title_color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff&hide_border=true)
 
 </div>
 
-## 🤝 Let's Connect
-
-I'm always excited to collaborate on interesting projects and exchange ideas.
-Reach out through:
-
-[![Email](https://img.shields.io/badge/Email-contact%40fasu.dev-blue?style=flat-square&logo=gmail)](mailto:contact@fasu.dev)
-[![GitHub](https://img.shields.io/badge/GitHub-pyyupsk-black?style=flat-square&logo=github)](https://github.com/pyyupsk)
-[![Twitter](https://img.shields.io/badge/Twitter-@pyyupsk__-blue?style=flat-square&logo=twitter)](https://x.com/pyyupsk_)
-
 ---
 
 <div align="center">
-  
-### 💡 Open to new opportunities and collaborations
 
-Let's build something amazing together. Whether it's an open-source project or an innovative idea, I'm all ears!
+**Open to collaborations and interesting projects**
 
 </div>
