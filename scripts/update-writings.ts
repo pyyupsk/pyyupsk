@@ -1,77 +1,106 @@
 import path from "node:path";
 import Parser from "rss-parser";
+import { atomicWrite, safeRead, validateFileExists } from "./lib/file-utils";
+import { logger } from "./lib/logger";
+import { withRetry } from "./lib/retry";
 
+// Configuration
 const RSS_URL = "https://fasu.dev/rss.xml";
 const README_PATH = path.join(process.cwd(), "README.md");
-const MAX_POSTS = 5; // Number of latest posts to display
+const MAX_POSTS = 5;
+const START_MARKER = "<!-- START_WRITINGS_TEMPLATE -->";
+const END_MARKER = "<!-- END_WRITINGS_TEMPLATE -->";
 
-type RSSFeed = {
+interface RSSFeed {
   items: {
     title: string;
     link: string;
     pubDate: string;
     isoDate: string;
   }[];
-};
-
-async function fetchWritingsPosts(): Promise<RSSFeed["items"]> {
-  try {
-    console.log("🌐 Fetching RSS feed...");
-
-    const parser = new Parser<RSSFeed>();
-    const feed = (await parser.parseURL(RSS_URL)) as RSSFeed;
-
-    // Filter posts from /writings/ path and map to our interface
-    const writingsPosts = feed.items
-      .filter((item) => item.link?.includes("/writings/"))
-      .map((item) => ({
-        ...item,
-        title: item.title || "",
-        link: item.link || "",
-        pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
-      }))
-      // Sort by publication date (newest first)
-      .sort(
-        (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
-      )
-      // Take only the latest posts
-      .slice(0, MAX_POSTS);
-
-    return writingsPosts;
-  } catch (error) {
-    console.error("❌ Error fetching RSS feed:", error);
-    throw error;
-  }
 }
 
-try {
-  console.log("📝 Starting writings update...");
+async function fetchWritingsPosts(): Promise<RSSFeed["items"]> {
+  logger.info("Fetching RSS feed...");
 
-  // Fetch latest posts from RSS
+  const parser = new Parser<RSSFeed>();
+
+  const feed = await withRetry(
+    async () => {
+      const result = (await parser.parseURL(RSS_URL)) as RSSFeed;
+
+      if (!result.items || !Array.isArray(result.items)) {
+        throw new Error(
+          "Invalid RSS feed response: missing or invalid items array",
+        );
+      }
+
+      return result;
+    },
+    {
+      maxRetries: 3,
+      baseDelay: 1000,
+      onRetry: (attempt, error, nextDelay) => {
+        logger.warn(
+          `RSS fetch attempt ${attempt} failed: ${error.message}. Retrying in ${nextDelay}ms...`,
+        );
+      },
+    },
+  );
+
+  const writingsPosts = feed.items
+    .filter((item) => item.link?.includes("/writings/"))
+    .map((item) => ({
+      ...item,
+      title: item.title || "",
+      link: item.link || "",
+      pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
+    }))
+    // Sort by publication date (newest first)
+    .sort(
+      (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
+    )
+    .slice(0, MAX_POSTS);
+
+  return writingsPosts;
+}
+
+async function main(): Promise<void> {
+  logger.info("Starting writings update...");
+
+  await validateFileExists(README_PATH);
+
   const posts = await fetchWritingsPosts();
   console.log(`📚 Found ${posts.length} recent writings posts`);
 
-  // Read current README
-  console.log("📖 Reading README.md...");
-  const readmeFile = Bun.file(README_PATH);
-  const readmeContent = await readmeFile.text();
+  if (posts.length === 0) {
+    logger.warn("No writings posts found in RSS feed");
+    logger.info(
+      "Check that the RSS feed contains posts with /writings/ in the URL",
+    );
+    process.exit(0);
+  }
 
-  // Find the template markers
-  const startMarker = "<!-- START_WRITINGS_TEMPLATE -->";
-  const endMarker = "<!-- END_WRITINGS_TEMPLATE -->";
+  logger.info("Reading README.md...");
+  const readmeContent = await safeRead(README_PATH);
 
-  const startIndex = readmeContent.indexOf(startMarker);
-  const endIndex = readmeContent.indexOf(endMarker);
+  const startIndex = readmeContent.indexOf(START_MARKER);
+  const endIndex = readmeContent.indexOf(END_MARKER);
 
   if (startIndex === -1 || endIndex === -1) {
-    console.error("❌ Template markers not found in README.md");
-    console.log("Make sure your README contains:");
-    console.log("<!-- START_WRITINGS_TEMPLATE -->");
-    console.log("<!-- END_WRITINGS_TEMPLATE -->");
+    logger.error("Template markers not found in README.md");
+    logger.info("Make sure your README contains:");
+    logger.info(START_MARKER);
+    logger.info(END_MARKER);
     process.exit(1);
   }
 
-  // Generate new posts content
+  if (startIndex >= endIndex) {
+    logger.error("Template markers are in wrong order in README.md");
+    logger.info("Ensure START marker appears before END marker");
+    process.exit(1);
+  }
+
   const postsContent = posts
     .map((post) => {
       // Clean the link - ensure it doesn't have double slashes except after protocol
@@ -80,28 +109,41 @@ try {
     })
     .join("\n");
 
-  const newContent = `${startMarker}\n${postsContent}\n${endMarker}`;
+  const newContent = `${START_MARKER}\n${postsContent}\n${END_MARKER}`;
 
-  // Check if content needs updating
   const currentSection = readmeContent.substring(
     startIndex,
-    endIndex + endMarker.length,
+    endIndex + END_MARKER.length,
   );
   if (currentSection === newContent) {
-    console.log("✅ Writings are already up to date");
+    logger.success("Writings are already up to date");
     process.exit(0);
   }
 
-  // Update README
   const updatedContent =
     readmeContent.substring(0, startIndex) +
     newContent +
-    readmeContent.substring(endIndex + endMarker.length);
+    readmeContent.substring(endIndex + END_MARKER.length);
 
-  console.log("✏️ Writing updated README.md...");
-  await Bun.write(README_PATH, updatedContent);
-  console.log("✅ README.md updated successfully with latest writings");
-} catch (error) {
-  console.error("❌ Error updating writings:", error);
-  process.exit(1);
+  logger.info("Writing updated README.md...");
+  await atomicWrite(README_PATH, updatedContent);
+  logger.success("README.md updated successfully with latest writings");
 }
+
+main().catch((error: unknown) => {
+  // NOSONAR
+  const errorMessage = error instanceof Error ? error.message : String(error);
+  logger.error(`Failed to update writings: ${errorMessage}`);
+
+  if (error instanceof Error && error.stack) {
+    console.error("Stack trace:", error.stack);
+  }
+
+  logger.info("To resolve this issue:");
+  logger.info("1. Check your internet connection");
+  logger.info(`2. Verify the RSS feed is accessible: ${RSS_URL}`);
+  logger.info("3. Ensure README.md exists with proper template markers");
+  logger.info("4. Run the script from the repository root directory");
+
+  process.exit(1);
+});

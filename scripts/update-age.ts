@@ -1,5 +1,8 @@
 import path from "node:path";
+import { atomicWrite, safeRead, validateFileExists } from "./lib/file-utils";
+import { logger } from "./lib/logger";
 
+// Configuration
 const BIRTH_DATE = new Date("2003-01-23");
 const README_PATH = path.join(process.cwd(), "README.md");
 
@@ -18,38 +21,54 @@ function calculateAge(birthDate: Date): number {
   return age;
 }
 
-try {
-  console.log("📅 Calculating current age...");
+async function main(): Promise<void> {
+  logger.info("Calculating current age...");
   const currentAge = calculateAge(BIRTH_DATE);
   console.log(`🎂 Current age: ${currentAge}`);
 
-  console.log("📖 Reading README.md...");
-  const readmeFile = Bun.file(README_PATH);
-  const readmeContent = await readmeFile.text();
+  logger.info("Validating README.md exists...");
+  await validateFileExists(README_PATH);
+
+  logger.info("Reading README.md...");
+  const readmeContent = await safeRead(README_PATH);
 
   // Pattern to match age in the format "I'm a XX-year-old"
   const agePattern = /I'm a \d+-year-old/g;
 
-  // Check if age needs updating
   const currentAgeString = `I'm a ${currentAge}-year-old`;
   if (readmeContent.includes(currentAgeString)) {
-    console.log("✅ Age is already up to date");
+    logger.success("Age is already up to date");
     process.exit(0);
   }
 
-  // Update the age
   const updatedContent = readmeContent.replaceAll(agePattern, currentAgeString);
 
-  // Check if any changes were made
   if (updatedContent === readmeContent) {
-    console.log("⚠️ No age pattern found in README.md");
+    logger.warn("No age pattern found in README.md");
+    logger.info(
+      'Hint: Ensure README.md contains text like "I\'m a XX-year-old"',
+    );
     process.exit(0);
   }
 
-  console.log("✏️ Writing updated README.md...");
-  await Bun.write(README_PATH, updatedContent);
-  console.log("✅ README.md updated successfully with current age");
-} catch (error) {
-  console.error("❌ Error updating age:", error);
-  process.exit(1);
+  logger.info("Writing updated README.md...");
+  await atomicWrite(README_PATH, updatedContent);
+  logger.success("README.md updated successfully with current age");
 }
+
+main().catch((error: unknown) => {
+  // NOSONAR
+  const errorMessage = error instanceof Error ? error.message : String(error);
+  logger.error(`Failed to update age: ${errorMessage}`);
+
+  if (error instanceof Error && error.stack) {
+    console.error("Stack trace:", error.stack);
+  }
+
+  logger.info("To resolve this issue:");
+  logger.info("1. Ensure README.md exists in the repository root");
+  logger.info('2. Ensure it contains text like "I\'m a XX-year-old"');
+  logger.info("3. Run the script from the repository root directory");
+
+  process.exit(1);
+});

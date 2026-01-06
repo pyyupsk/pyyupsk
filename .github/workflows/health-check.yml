@@ -1,0 +1,31 @@
+name: 🏥 Health Check
+
+on:
+  schedule:
+    # Runs weekly on Sunday at 00:00 UTC
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        name: ⬇️ Checkout repository
+
+      - uses: oven-sh/setup-bun@b7a1c7ccf290d58743029c4f6903da283811b979 # v2.1.0
+        name: 🥟 Setup Bun
+
+      - name: 📦 Install dependencies
+        run: bun install
+
+      - name: 🏥 Run health check
+        run: bun run health-check

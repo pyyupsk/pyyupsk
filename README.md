@@ -17,11 +17,11 @@ reverse engineering, and building innovative projects.
 
 ```typescript
 const skills: Record<string, string[]> = {
-  languages: ['TypeScript', 'JavaScript', 'C#', 'Rust', 'Python', 'Go'],
-  frontend: ['React', 'Next.js', 'Vue', 'Nuxt', 'Astro', 'Tailwind CSS'],
-  backend: ['Node.js', 'Express.js', 'Elysia', 'Nest.js', 'tRPC'],
-  databases: ['PostgreSQL', 'MySQL', 'SQLite'],
-  tools: ['Git', 'Docker', 'Vercel', 'Cloudflare', 'Turbo Repo', 'Neovim'],
+  languages: ["TypeScript", "JavaScript", "C#", "Rust", "Python", "Go"],
+  frontend: ["React", "Next.js", "Vue", "Nuxt", "Astro", "Tailwind CSS"],
+  backend: ["Node.js", "Express.js", "Elysia", "Nest.js", "tRPC"],
+  databases: ["PostgreSQL", "MySQL", "SQLite"],
+  tools: ["Git", "Docker", "Vercel", "Cloudflare", "Turbo Repo", "Neovim"],
 };
 ```
 
@@ -45,6 +45,7 @@ For more details, see the full
 ## 📝 Latest Writings
 
 <!-- START_WRITINGS_TEMPLATE -->
+
 - **[From requirements.txt to pyproject.toml: My Python Evolution](https://fasu.dev/writings/from-requirements-txt-to-pyproject-toml-my-python-evolution)**
 - **[The Art of Clean Feature Architecture: What I Actually Build](https://fasu.dev/writings/the-art-of-clean-feature-architecture-what-i-actually-build)**
 - **[When Node.js Devs Venture into Python Territory: A Cross-Ecosystem Journey](https://fasu.dev/writings/when-node-js-devs-venture-into-python-territory-a-cross-ecosystem-journey)**
@@ -56,10 +57,10 @@ For more details, see the full
 
 <div align="center">
   
-| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=pyyupsk&show_icons=true&hide_border=true&bg_color=1e1e2e&text_color=cdd6f4&icon_color=cba6f7&title_color=94e2d5) | ![GitHub Streak](https://streak-stats.demolab.com?user=pyyupsk&theme=catppuccin-mocha&hide_border=true) |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| ![GitHub Stats](https://awesome-github-stats.azurewebsites.net/user-stats/pyyupsk?cardType=level&Background=0d1117&Text=c9d1d9&Title=58a6ff&Ring=58a6ff&Border=0d1117) | ![GitHub Streak](https://github-readme-streak-stats-eight.vercel.app?user=pyyupsk&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=6e7681&border=0d1117) |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk&bg_color=1e1e2e&color=cdd6f4&line=cba6f7&point=94e2d5&area=true&hide_border=true)
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk&bg_color=0d1117&color=c9d1d9&title_color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff&hide_border=true)
 
 </div>
 
