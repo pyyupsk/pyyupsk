@@ -1,13 +1,6 @@
 <div align="center">
 
-```
-██████╗ ██╗   ██╗██╗   ██╗██╗   ██╗██████╗ ███████╗██╗  ██╗
-██╔══██╗╚██╗ ██╔╝╚██╗ ██╔╝██║   ██║██╔══██╗██╔════╝██║ ██╔╝
-██████╔╝ ╚████╔╝  ╚████╔╝ ██║   ██║██████╔╝███████╗█████╔╝
-██╔═══╝   ╚██╔╝    ╚██╔╝  ██║   ██║██╔═══╝ ╚════██║██╔═██╗
-██║        ██║      ██║   ╚██████╔╝██║     ███████║██║  ██╗
-╚═╝        ╚═╝      ╚═╝    ╚═════╝ ╚═╝     ╚══════╝╚═╝  ╚═╝
-```
+<img src="https://raw.githubusercontent.com/pyyupsk/pyyupsk/main/.github/assets/logo.png" alt="PYYUPSK" width="500">
 
 **Self-taught developer crafting digital experiences**
 
