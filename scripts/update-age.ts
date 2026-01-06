@@ -56,8 +56,7 @@ async function main(): Promise<void> {
   logger.success("README.md updated successfully with current age");
 }
 
-main().catch((error: unknown) => {
-  // NOSONAR
+main().catch((error: unknown) => { // NOSONAR
   const errorMessage = error instanceof Error ? error.message : String(error);
   logger.error(`Failed to update age: ${errorMessage}`);
 
