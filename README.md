@@ -19,7 +19,7 @@
 
 ### About
 
-I'm **First** — a 22-year-old developer from Thailand passionate about building elegant, performant software. I specialize in TypeScript ecosystems and love exploring the intersection of developer experience and system design.
+I'm **First** — a 23-year-old developer from Thailand passionate about building elegant, performant software. I specialize in TypeScript ecosystems and love exploring the intersection of developer experience and system design.
 
 Currently focused on **performance optimization** and **system architecture**.
 
