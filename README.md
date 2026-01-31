@@ -43,11 +43,11 @@ const stack = {
 
 <!-- START_WRITINGS_TEMPLATE -->
 
-- **[2025's Security Crisis: Why Memory-Safe Languages Matter](https://fasu.dev/writings/2025s-security-landscape-why-memory-safe-languages-arent-optional-anymore)**
-- **[My Pragmatic Approach to Building npm Packages in 2026](https://fasu.dev/writings/how-i-build-an-npm-package-in-2026)**
-- **[From requirements.txt to pyproject.toml: Python Evolution](https://fasu.dev/writings/from-requirements-txt-to-pyproject-toml-my-python-evolution)**
+- **[2025's Security Crisis: Why Memory-Safe Languages Matter](https://fasu.dev/writings/2025s-security-crisis-why-memory-safe-languages-matter)**
+- **[My Pragmatic Approach to Building npm Packages in 2026](https://fasu.dev/writings/my-pragmatic-approach-to-building-npm-packages-in-2026)**
+- **[From requirements.txt to pyproject.toml: Python Evolution](https://fasu.dev/writings/from-requirements-txt-to-pyproject-toml-python-evolution)**
 - **[The Art of Clean Feature Architecture: What I Actually Build](https://fasu.dev/writings/the-art-of-clean-feature-architecture-what-i-actually-build)**
-- **[A Node.js Developer's Journey into Python Territory](https://fasu.dev/writings/when-node-js-devs-venture-into-python-territory-a-cross-ecosystem-journey)**
+- **[A Node.js Developer's Journey into Python Territory](https://fasu.dev/writings/a-node-js-developers-journey-into-python-territory)**
 <!-- END_WRITINGS_TEMPLATE -->
 
 ---
