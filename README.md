@@ -43,11 +43,11 @@ const stack = {
 
 <!-- START_WRITINGS_TEMPLATE -->
 
+- **[Git from Zero to Pull Request: A Practical Guide](https://fasu.dev/writings/git-from-zero-to-pull-request-a-practical-guide)**
 - **[2025's Security Crisis: Why Memory-Safe Languages Matter](https://fasu.dev/writings/2025s-security-crisis-why-memory-safe-languages-matter)**
 - **[My Pragmatic Approach to Building npm Packages in 2026](https://fasu.dev/writings/my-pragmatic-approach-to-building-npm-packages-in-2026)**
 - **[From requirements.txt to pyproject.toml: Python Evolution](https://fasu.dev/writings/from-requirements-txt-to-pyproject-toml-python-evolution)**
 - **[The Art of Clean Feature Architecture: What I Actually Build](https://fasu.dev/writings/the-art-of-clean-feature-architecture-what-i-actually-build)**
-- **[A Node.js Developer's Journey into Python Territory](https://fasu.dev/writings/a-node-js-developers-journey-into-python-territory)**
 <!-- END_WRITINGS_TEMPLATE -->
 
 ---
