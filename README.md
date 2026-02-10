@@ -28,13 +28,13 @@ Currently focused on **performance optimization** and **system architecture**.
 ### Stack
 
 ```ts
-const stack = {
-  languages: ["TypeScript", "Rust", "Go", "Python", "C#"],
-  frontend: ["React", "Next.js", "Vue", "Nuxt", "Astro"],
-  backend: ["Node.js", "Elysia", "Nest.js", "tRPC"],
-  database: ["PostgreSQL", "MySQL", "SQLite"],
-  tools: ["Neovim", "Docker", "Vercel", "Cloudflare"],
-} as const;
+const developer = {
+  languages: ["TypeScript", "JavaScript", "Python", "Go", "Rust", "C#"],
+  frontend: ["React", "Next.js", "Vue", "Nuxt", "Astro", "Tailwind CSS"],
+  backend: ["Node.js", "Express", "Hono", "Elysia", "tRPC", "Convex"],
+  databases: ["PostgreSQL", "MySQL", "SQLite", "Drizzle ORM"],
+  tools: ["Git", "Vercel", "Cloudflare", "Turborepo"],
+};
 ```
 
 ---
