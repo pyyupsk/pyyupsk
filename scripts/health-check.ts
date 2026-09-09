@@ -48,7 +48,7 @@ const HEALTH_CHECK_ENDPOINTS: HealthCheckEndpoint[] = [
   },
   {
     name: "Activity Graph",
-    url: "https://github-readme-activity-graph.vercel.app/graph?username=pyyupsk",
+    url: "https://github-readme-activity-graph-lyart-seven.vercel.app/graph?username=pyyupsk",
     type: "http",
     timeout: 30000,
   },
