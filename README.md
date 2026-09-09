@@ -59,7 +59,7 @@ const developer = {
 | ![GitHub Stats](https://awesome-github-stats.azurewebsites.net/user-stats/pyyupsk?cardType=level&Background=0d1117&Text=c9d1d9&Title=58a6ff&Ring=58a6ff&Border=0d1117&fontFamily=Inter) | ![GitHub Streak](https://github-readme-streak-stats-eight.vercel.app?user=pyyupsk&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=6e7681&border=0d1117) |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
-![GitHub Activity Graph](https://graph.fasu.dev/graph?username=pyyupsk&bg_color=0d1117&color=c9d1d9&title_color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff&hide_border=true)
+![GitHub Activity Graph](https://graph.fasu.dev/graph?user=pyyupsk&bg=0d1117&text=c9d1d9&title-color=58a6ff&line=58a6ff&point=c9d1d9&area=true&fill=58a6ff)
 
 </div>
 
