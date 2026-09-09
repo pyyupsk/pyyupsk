@@ -43,11 +43,11 @@ const developer = {
 
 <!-- START_WRITINGS_TEMPLATE -->
 
-- **[ The LLM Wiki Pattern: A Second Brain That Compounds ](https://fasu.dev/writings/the-llm-wiki-pattern-a-second-brain-that-compounds)**
-- **[ Why I Built a New Vite Env Plugin ](https://fasu.dev/writings/why-i-built-a-new-vite-env-plugin)**
-- **[ Stop Fighting localhost: Stable Dev URLs with Cloudflared ](https://fasu.dev/writings/stop-fighting-localhost-stable-dev-urls-with-cloudflared)**
-- **[ Git from Zero to Pull Request: A Practical Guide ](https://fasu.dev/writings/git-from-zero-to-pull-request-a-practical-guide)**
-- **[ 2025's Security Crisis: Why Memory-Safe Languages Matter ](https://fasu.dev/writings/2025s-security-crisis-why-memory-safe-languages-matter)**
+- **[The LLM Wiki Pattern: A Second Brain That Compounds](https://fasu.dev/writings/the-llm-wiki-pattern-a-second-brain-that-compounds)**
+- **[Why I Built a New Vite Env Plugin](https://fasu.dev/writings/why-i-built-a-new-vite-env-plugin)**
+- **[Stop Fighting localhost: Stable Dev URLs with Cloudflared](https://fasu.dev/writings/stop-fighting-localhost-stable-dev-urls-with-cloudflared)**
+- **[Git from Zero to Pull Request: A Practical Guide](https://fasu.dev/writings/git-from-zero-to-pull-request-a-practical-guide)**
+- **[2025's Security Crisis: Why Memory-Safe Languages Matter](https://fasu.dev/writings/2025s-security-crisis-why-memory-safe-languages-matter)**
 <!-- END_WRITINGS_TEMPLATE -->
 
 ---
@@ -59,7 +59,7 @@ const developer = {
 | ![GitHub Stats](https://awesome-github-stats.azurewebsites.net/user-stats/pyyupsk?cardType=level&Background=0d1117&Text=c9d1d9&Title=58a6ff&Ring=58a6ff&Border=0d1117&fontFamily=Inter) | ![GitHub Streak](https://github-readme-streak-stats-eight.vercel.app?user=pyyupsk&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakNum=c9d1d9&sideNums=c9d1d9&currStreakLabel=58a6ff&sideLabels=c9d1d9&dates=6e7681&border=0d1117) |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
-![GitHub Activity Graph](https://github-readme-activity-graph-lyart-seven.vercel.app/graph?username=pyyupsk&bg_color=0d1117&color=c9d1d9&title_color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff&hide_border=true)
+![GitHub Activity Graph](https://graph.fasu.dev/graph?username=pyyupsk&bg_color=0d1117&color=c9d1d9&title_color=58a6ff&line=58a6ff&point=c9d1d9&area=true&area_color=58a6ff&hide_border=true)
 
 </div>
 
