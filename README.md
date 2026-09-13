@@ -43,11 +43,11 @@ const developer = {
 
 <!-- START_WRITINGS_TEMPLATE -->
 
+- **[ Using aipass-proxy with opencode ](https://fasu.dev/writings/using-aipass-proxy-with-opencode/)**
 - **[ mise: The One Tool That Replaced Everything ](https://fasu.dev/writings/mise-the-one-tool-that-replaced-everything/)**
 - **[ The LLM Wiki Pattern: A Second Brain That Compounds ](https://fasu.dev/writings/the-llm-wiki-pattern-a-second-brain-that-compounds/)**
 - **[ Why I Built a New Vite Env Plugin ](https://fasu.dev/writings/why-i-built-a-new-vite-env-plugin/)**
 - **[ Stop Fighting localhost: Stable Dev URLs with Cloudflared ](https://fasu.dev/writings/stop-fighting-localhost-stable-dev-urls-with-cloudflared/)**
-- **[ Git from Zero to Pull Request: A Practical Guide ](https://fasu.dev/writings/git-from-zero-to-pull-request-a-practical-guide/)**
 <!-- END_WRITINGS_TEMPLATE -->
 
 ---
